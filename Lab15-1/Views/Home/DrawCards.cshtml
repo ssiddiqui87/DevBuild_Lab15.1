@@ -1,0 +1,16 @@
+﻿@model Deck
+@{
+    ViewData["Title"] = "Five cards from a deck";
+}
+
+    <h1>Deck ID: @Model.deck_id</h1>
+
+
+    <ul>
+        @foreach (CardContent c in Model.cards)
+        {
+
+            <li><h2>@c.value of @c.suit</h2></li>
+            <img src="@c.image" />
+        }
+    </ul>
